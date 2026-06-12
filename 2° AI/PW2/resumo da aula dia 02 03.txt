@@ -1,0 +1,42 @@
+pra começar, primeiro a abstraçao (focar no importante, deixando os detalhes pra lá) 
+classes = molde (int, float, boolean, str) agrupamos em um molde(por exemplo, aluno, tem cpf, rm, nome, nacimento, sala etc)
+classe conceito fundamental da poo (serve pra criar estruturas pra representar um objeto do mundo real)
+a classe nao é o objeto, mas a utilizamos para construir o objeto, ela é a "forma do bolo"
+diagrama de classes é parecido com DER, (nome da classe = entidade, caracteristicas = atributos), ja a ultima caixa do uml sao as açoes
+ou seja é uma parte do comando, como é exibido
+~ ou + = visibilidade do elemento
+ja o objeto é o bolo em si, apartir do mesmo molde, por exemplo animais diferentes mas dentro da mesma raça(classe) ja as caracteristicas seriam
+raça, tamanho, nome, etc. 
+
+exemplo:
+
+
+recibo
+valor(numero com virgula) : dobble, pagador(nome) : sting, data(data) : date, descricao(texto) : sting, recebedor(nome) : string
+pegarval.dobble()a
+
+outro:
+
+livro
+titulo : sting
+autor : string
+narrador : string
+editora : string
+duracao : LocalTime
+versao : string
+preco : double
+resumo : string
+
+convenção, cada linguagem tem uma convençao (estilo de definiçao de variavel, atributos, etc...)
+
+
+convencao do java: 
+
+classes (= entidade)
+classe SEMPRE com letra maiuscula
+SEM UNDERLINE
+sempre comeco de palavra da definicao de classe vai ser um maiusculo ou seja, EX: AlunoHoracio
+
+atributos 
+caracteristicas de classes
+

@@ -1,0 +1,21 @@
+	1 - Criar o repositório remoto no github chamado pw2-play-livros
+	
+	2 - Abrir o projeto playLivros no Intellij
+	
+	3 - No terminal, configure seu usuário no git com:
+		git config --global user.name "your_name"
+		git config --global user.email "your_email@example.com"
+	
+	4 - Inicialize o projeto com git executando:
+		git init
+	
+	5 - Verifique se os arquivos estão corretos com `git status`
+	
+	6 - Adicione os arquivos usando `git add .`
+	
+	7 - Verifique se foram adicionados corretamente com `git status`
+	
+	8 - Execute `git commit -m "Criação da classe Livro"`
+	
+	9 - Envie o repositório local para o github
+

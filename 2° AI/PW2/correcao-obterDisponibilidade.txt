@@ -1,0 +1,13 @@
+
+    public DisponibilidadeEnum obterDisponibilidade(){
+        LocalDate dataAtual = LocalDate.now();
+        if(dataLancamento == null){
+            return DisponibilidadeEnum.INDISPONIVEL;
+        }else if(dataLancamento.isAfter(dataAtual)){
+            return DisponibilidadeEnum.EM_PRE_VENDA;
+        }else if(dataLancamento.isAfter(dataAtual.minusDays(30))){
+            return DisponibilidadeEnum.LANCAMENTO_RECENTE;
+        }else{
+            return DisponibilidadeEnum.DISPONIVEL;
+        }
+    }

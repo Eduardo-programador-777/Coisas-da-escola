@@ -1,0 +1,46 @@
+IMPORTANTE!
+
+read(): lê o arquivo totalmente a partir do cursor
+readline: lê somente a linha onde esta o cursor
+readlines: transforma cada linha do arquivo em um elemento de uma lista de strings 
+seek: posiciona o cursor em algum ponto do arquivo txt
+len: conta quantos elementos há em uma lista ou conta quantos charactéres há em uma string
+split(): transforma string em lista
+
+EXERCICIO:
+
+Dado um menu:
+0 - Sair
+1 - Grava linha no arquivo
+2 - Conte palavras com 5 caracteres 
+Escolha:
+
+#Davi Calado e Eduardo Marassatti 2ºA.I
+import os
+os.system("cls")
+
+nome_arquivo = ("Att") + ".txt"
+arq = open(nome_arquivo, "w", encoding="utf-8")
+
+while True:
+    print("""
+0 - Sair
+1 - Gravar linha no arquivo
+2 - Contar palavras com 5 characteres                     
+""")
+    opcao = int(input("Escolha uma das opções: "))
+    match opcao:
+        case 0:
+            break
+        case 1:
+            conteudo = str(input('Digite o conteudo que deseja colocar no arquivo: '))
+            arq.write(f"{conteudo}\n")
+        case 2:
+           with open("Att.txt", "r", encoding="utf-8") as dados:
+                ler = arq.read()
+                palavras = ler.split(" ")
+                vezes = 0
+                for palavras in palavras:
+                    if len(palavras) == 5:
+                        vezes += 1
+                print(f"O arquivo contém {vezes} palavras com 5 caracteres.")

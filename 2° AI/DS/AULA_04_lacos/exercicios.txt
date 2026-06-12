@@ -1,0 +1,20 @@
+Exercicios:
+1. Dado um numero, exiba os seus PROXIMOS multiplos:
+Entrada: 5 3	Saída: 5 10 15 
+
+2. Somar numeros até que seja digitado zero;
+Entrada: 6 4 -10 5 0	Saída: 5
+
+3. Pedir três notas ao usuário, descartar a de menor valor e calcular a media das duas maiores. As notas devem ser válidas (entre 0 e 10).
+Simulação:
+Nota 1: 45
+ERRO!
+Nota 1: -2
+ERRO!
+Nota 1: 10
+Nota 2: 33
+ERRO!
+Nota 2: 0
+Nota 3: 5
+
+Média 7.5

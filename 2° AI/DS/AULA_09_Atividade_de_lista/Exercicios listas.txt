@@ -1,0 +1,17 @@
+Usando apenas recursos de lógica de programação Sem usar métodos ou funções do Python, faças os seguintes programas:
+1. Pedir para o usuário digitar valores inteiros em uma lista:
+[4, 7, 6, 5, 4, 9, 6, 3, 2, 3]
+Em uma segunda lista coloque somente os valores únicos e em ordem crescente:
+[2, 3, 4, 5, 6, 7, 9]
+
+2. Pedir para o usário digitar valores inteiros em duas listas:
+[4, 7, 6, 5, 4, 9, 6]
+[1, 5, 8, 7, 4]
+Em uma terceira lista coloque insira a união das duas listas em ordem crescente:
+[1, 4, 5, 6, 7, 9]
+
+3. Pedir para o usário digitar valores inteiros em duas listas:
+[4, 7, 6, 5, 4, 9, 6]
+[1, 5, 8, 7, 4]
+Em uma terceira lista coloque insira a intersecção das duas listas em ordem crescente:
+[4, 5, 7]

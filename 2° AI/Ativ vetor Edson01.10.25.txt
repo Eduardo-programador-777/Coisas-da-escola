@@ -1,0 +1,1 @@
+Considere um vetor com os valores preenchidos, fazer um procedimento que preencha os outros dois vetores, um com metade do tamanho, um com os cinco menores valores e outro com os cinco maiores valores

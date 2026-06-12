@@ -1,0 +1,11 @@
+1. Pesquise a tabela das aliquotas do inss 2026 na internet, e faça um programa que dado o salário, calculo o valor pago de inss.
+? INSS
+
+2. Pesquise a tabela das aliquotas do Imposto de renda 2026 na internet, e faça um programa que dado o salário, calculo o valor pago de IR.
+? IR
+
+3. Dado um salário, calcule o desconto de INSS e IR, exibindo o salario bruto, INSS, IR, e salário líquido. Caso seja digitado um salário negativo, exibir "Digite um salário Válido!"
+? Salario bruto
+? INSS
+? IR
+? Salário líquido

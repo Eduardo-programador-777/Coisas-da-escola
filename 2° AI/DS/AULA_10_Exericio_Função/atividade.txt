@@ -1,0 +1,9 @@
+Drada uma frase digitada pelo usuário, efetuar as seguintes rotinas (função e procedimento).
+
+1. Contar quantos caracteres tem na frase.
+2. Contar quantas vogais tem na mensagem.
+3. Contar quantas palavras tem na mensagem
+4. trocar todos os dígitos por '?'
+5. Exibir a mensagem invertida.
+6. Pedir um range ao usuário e exibir somente este range (caso o renge exceta do tamanho da variável, advertir o usuário e pedir um novo range.)
+7. Todas as palavras da frase que tiver até 4 caracteres, inserir a palavra em uma lista de string.

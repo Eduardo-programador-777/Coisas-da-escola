@@ -1,0 +1,10 @@
+1 - Acesse o seu github e o repositório pw2-play-livros
+
+2 - Clique no botão `Code` e copie o endereço do repositório
+
+3 - Acesse o Windows Explorer, a unidade D: e a sua pasta de trabalho
+
+4 - Abra um "cmd" e clone o projeto com:
+	git clone https://github.com/SEU-USUARIO/pw2-play-livros.git
+
+5 - Abra o projeto no IntelliJ

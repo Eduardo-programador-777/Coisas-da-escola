@@ -1,0 +1,47 @@
+1 - Acesse o seu github e o repositório pw2-classes
+
+2 - Clique no botão Code e copie o endereço do repositório
+
+3 - Acesse o Windows Explorer, a unidade D: e a sua pasta de trabalho
+
+4 - Abra um "cmd" e clone o projeto com:
+	git clone https://github.com/SEU-USUARIO/pw2-classes.git
+
+5 - Vá no repositório https://github.com/etechas/pw2-atividade-1
+
+6 - Clique em Fork (canto superior direito) para criar uma cópia do repo na sua conta
+
+7 - Agora, acesse o seu github e localize o seu fork pw2-atividade-1
+
+8 - Clique no botão Code e copie o endereço do repositório
+
+8 - Abra o "cmd" na sua pasta de trabalho e clone o projeto com:
+	git clone https://github.com/SEU-USUARIO/pw2-atividade-1.git
+	cd pw2-atividade-1
+	
+8 - Crie uma branch usando:
+	git checkout -b nome1-nome2
+
+9 - Abra o projeto no IntelliJ
+
+10 - Altere o arquivo README.md colocando os nomes completos da DUPLA
+
+11 - Copie as classes de pw2-classes para a pasta src de pw2-atividade-1
+
+12 - Execute os comandos:
+	 git config --global user.name "nome1-nome2"
+	 git config --global user.email "nome1-nome2@example.com"
+	 git status
+	 git add .
+	 git commit -m "Entrega de exercício 1"
+	 git push
+
+13 - Vá no seu fork pw2-atividade-1 no GitHub
+
+14 - Clique em Compare & pull request
+
+15 - Escreva "Entrega de exercício 1"
+
+16 - Clique em Create pull request
+
+
