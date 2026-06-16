@@ -1,0 +1,24 @@
+0 - Sair
+1 - Gravar linha
+2 - Gravar linhas
+3 - Exibir o conteudo do arquivo
+4 - Exibir uma linha dada pelo usuario
+5 - Contar palavras
+6 - Contar caracteres
+7 - Contar palavras com N letras
+8 - Contar palavras dadas pelo usuário
+Escolha: _
+
+----------------------------
+0 - Sair
+1 - Gravar linha
+2 - Gravar linhas (pesquise o writelines)
+3 - Exibir o conteudo do arquivo
+4 - Exibir uma linha dada pelo usuario (usuario digitará a linha - cuidado se nao existir)
+5 - Contar palavras
+6 - Contar caracteres
+7 - Contar palavras com N letras  (pediro numero de caracteres ao usuario)
+8 - Contar palavras dadas pelo usuário (pedir a palavra ao usuario e mostrar a qtd)
+Escolha: _
+
+O projeto será apresentado e questionado
