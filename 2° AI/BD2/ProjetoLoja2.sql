@@ -1,7 +1,7 @@
-create database Loja;
-use Loja;
+create database Loja2;
+use Loja2;
 
-create table cliente(
+create table cliente2(
 cod_clie numeric(4) primary key,
 nome_clie varchar(20) not null,
 endereco varchar(30),
@@ -11,33 +11,33 @@ uf char(2),
 cnpj char(16),
 ie char(12),
 );
-create table vendedor(
+create table vendedor2(
 cod_ven numeric(4) primary key,
 nome_ven varchar(20) not null,
 salario_fixo numeric(10,2),
 comissao char(1)
 );
 
-create table produto(
+create table produto2(
 cod_prod numeric(4) primary key,
 unidade varchar(3),
 descricao varchar(20),
 val_unit numeric(8,2),
 );
 
-create table pedido(
+create table pedido2(
 num_pedido numeric(4) primary key,
 pr_entrenga numeric(3) not null,
-cod_ven numeric(4) foreign key references vendedor(cod_ven),
-cod_clie numeric(4) foreign key references cliente(cod_clie),
+cod_ven numeric(4) foreign key references vendedor2(cod_ven),
+cod_clie numeric(4) foreign key references cliente2(cod_clie),
 );
-create table item_pedido(
-num_pedido numeric(4) foreign key references pedido(num_pedido),
-cod_prod numeric(4) foreign key references produto(cod_prod),
+create table item_pedido2(
+num_pedido numeric(4) foreign key references pedido2(num_pedido),
+cod_prod numeric(4) foreign key references produto2(cod_prod),
 quant numeric(8,2),
 );
 
-insert into cliente values
+insert into cliente2 values
 (720, 'Ana', 'Rua 17 n.19', 'Niterói', '24358310', 'RJ', '12113231/0001-34', '2134'),
 (870, 'Flávio', 'Av. Pres. Vargas, 10', 'São Paulo', '22763931', 'SP', '22534126/9387-9', '4631'),
 (110, 'Jorge', 'Rua Caçapó, 13', 'Curitiba', '30078500', 'PR', '14512764/9834-9', NULL),
@@ -53,18 +53,18 @@ insert into cliente values
 (390, 'Sebastião', 'Rua da Igreja, 10', 'Uberaba', '30438700', 'MG', '32176547/213-3', '1820'),
 (234, 'José', 'Quadra 3, Bl. 3, sl. 1003', 'Brasília', '22841650', 'DF', '21763576/1232-3', '2931');
 
-insert into vendedor values
+insert into vendedor2 values
 (209, 'José', 1800.00, 'C'),
 (111, 'Carlos', 2490.00, 'A'),
 (11, 'João', 2780.00, 'C'),
 (240, 'Antônio', 9500.00, 'C'),
 (720, 'Felipe', 4600.00, 'A'),
-(213, 'Jonas', 2300.00, 'A');
-(101, 'João', 2650, 'C');
-(310, 'Josias', 870, 'B');
+(213, 'Jonas', 2300.00, 'A'),
+(101, 'João', 2650, 'C'),
+(310, 'Josias', 870, 'B'),
 (250, 'Maurício', 2930, 'B');
 
-INSERT INTO produto VALUES
+INSERT INTO produto2 VALUES
 (25,'KG','Queijo',0.97),
 (31,'BAR','Chocolate',0.87),
 (78,'L','Vinho',2.00),
@@ -76,27 +76,27 @@ INSERT INTO produto VALUES
 (87,'M','Cano',1.97),
 (77,'M','Papel',1.05);
 
-INSERT INTO pedido VALUES
-(121,20,410,209),
-(97,20,720,101),
-(101,15,720,101),
+INSERT INTO pedido2 VALUES
+(121,20,209,410),
+(97,20,101,720),
+(101,15,101,720),
 (137,20,720,720),
-(148,20,720,101),
-(189,15,870,213),
-(104,30,110,101),
-(203,30,830,250),
-(98,20,410,209),
-(143,30,20,111),
-(105,30,180,240),
-(111,15,260,240),
-(103,20,260,11),
-(91,20,260,11),
-(138,20,260,11),
-(108,15,290,310),
-(119,30,390,250),
-(127,10,410,11);
+(148,20,101,720),
+(189,15,213,870),
+(104,30,101,110),
+(203,30,250,830),
+(98,20,209,410),
+(143,30,111,20),
+(105,30,240,180),
+(111,15,240,260),
+(103,20,11,260),
+(91,20,11,260),
+(138,20,11,260),
+(108,15,310,290),
+(119,30,250,390),
+(127,10,11,410);
 
-INSERT INTO item_pedido VALUES
+INSERT INTO item_pedido2 VALUES
 (121,25,10),
 (121,31,35),
 (97,77,20),
@@ -115,5 +115,5 @@ INSERT INTO item_pedido VALUES
 (143,31,20),
 (143,78,10);
 
-
+SELECT produto2.cod_prod, produto2.descricao, item_pedido2.quant FROM produto2, item_pedido2 WHERE produto2.cod_prod = item_pedido2.cod_prod AND num_pedido = 148;
 

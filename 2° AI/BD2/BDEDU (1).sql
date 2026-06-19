@@ -138,3 +138,4 @@ INSERT INTO Carrinho_Jogo (id_carrinho, id_jogo, quantidade) VALUES (1, 1, 1);
 INSERT INTO Carrinho_Jogo (id_carrinho, id_jogo, quantidade) VALUES (1, 2, 1);
 INSERT INTO Carrinho_Jogo (id_carrinho, id_jogo, quantidade) VALUES (2, 3, 2);
 INSERT INTO Carrinho_Jogo (id_carrinho, id_jogo, quantidade) VALUES (3, 4, 1);
+
