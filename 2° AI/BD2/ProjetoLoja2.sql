@@ -115,5 +115,5 @@ INSERT INTO item_pedido2 VALUES
 (143,31,20),
 (143,78,10);
 
-SELECT produto2.cod_prod, produto2.descricao, item_pedido2.quant FROM produto2, item_pedido2 WHERE produto2.cod_prod = item_pedido2.cod_prod AND num_pedido = 148;
+
 
