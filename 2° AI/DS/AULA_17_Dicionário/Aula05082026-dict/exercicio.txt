@@ -1,0 +1,13 @@
+Considere o menu
+
+0 - Sair
+1 - Inicializar o dicionario
+2 - Modificar um value
+3 - Modificar uma key
+4 - Remover um value
+5 - Remover uma key
+6 - Listar as keys
+7 - Listar os values
+8 - Exibir o dicionario
+
+Escolha:
