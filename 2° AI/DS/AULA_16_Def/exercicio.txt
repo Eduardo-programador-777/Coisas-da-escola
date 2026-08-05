@@ -1,0 +1,9 @@
+dada as 3 notas pelo usuario, calcular a media das 2 maiores. com a media calculada, verificar se ele esta aprovado (apartir de 6 ou reprovado)
+obs: as notas devem ser validas, a proxima só sera digitada se a anterior for valida
+
+dados os valores de a b c, faça um programa que calcule o valor de delta e as raizes das funções de segundo grau(bahskara).
+considere todas as restrições para efetuar esses calculos. crie funções e procedimentos que resolva cada problema separadamente
+
+ax²+bx+c
+a!=0
+delta>=0
