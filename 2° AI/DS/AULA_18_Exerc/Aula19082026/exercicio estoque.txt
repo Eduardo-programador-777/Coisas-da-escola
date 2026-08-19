@@ -1,0 +1,41 @@
+Crie um programa para controlar o estoque de uma pequena loja.
+
+O programa deverá utilizar um dicionário, no qual a key representa o nome de um produto e o value representa a quantidade disponível em estoque.
+
+Considere o menu
+
+0 - Sair
+1 - Inicializar o estoque
+2 - Modificar uma quantidade
+3 - Modificar o nome de um produto
+4 - Remover um produto
+5 - Listar os produtos
+6 - Listar as quantidades
+7 - Exibir o estoque
+
+Escolha:
+
+1 - Permite cadastrar produtos e suas respectivas quantidades, exemplo:
+estoque = {
+    "Arroz": 10,
+    "Feijão": 15,
+    "Macarrão": 20
+}
+
+2- O usuário informa o nome do produto e a nova quantidade disponível, exemplo:
+Produto: Arroz
+Nova quantidade: 25
+
+3- O usuário informa o nome atual do produto e seu novo nome, exemplo:
+Nome atual: Arroz
+Novo nome: Arroz Integral
+
+4- O usuário informa o produto que deseja retirar do estoque.
+
+5 - Exiba somente as keys do dicionário.
+
+6 - Exiba somente os values do dicionário.
+
+7 - Exiba o dicionário completo.
+
+Desafio: Fazer a opção 8 - Consultar um produto. Nesta opção, o usuário informa o nome do produto e o programa informa se ele existe no estoque e, caso exista, mostra sua quantidade.
