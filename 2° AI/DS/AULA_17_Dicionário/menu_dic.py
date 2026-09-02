@@ -39,7 +39,7 @@ def modificar_key(dicionario):
     if key in dicionario:
         nova_key = input("Digite a nova key: ")
 
-        if nova_key in dicionario and nova_key != key:
+        if nova_key in dicionario and nova_key == key:
             print("A nova key ja existe.")
         else:
             dicionario[nova_key] = dicionario.pop(key)
