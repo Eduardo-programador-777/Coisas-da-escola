@@ -1,6 +1,9 @@
 import os
+
+
 def pausar():
     os.system("pause")
+
 
 def exibir_dicionario(dicionario):
     if dicionario:
@@ -151,24 +154,24 @@ def editar_value(dicionario):
 
     valor_atual = dicionario[key_escolhida]
 
-    novo_valor = input("\nNovo valor: ")
+    novo_input = input("\nNovo valor: ")
 
     try:
         if type(valor_atual) == bool:
 
-            if novo_valor == "" or novo_valor == "0" or novo_valor == " ":
+            if novo_input == "" or novo_input == "0" or novo_input == " ":
                 novo_valor = False
             else:
                 novo_valor = True
 
         elif type(valor_atual) == int:
-            novo_valor = int(novo_valor)
+            novo_valor = int(novo_input)
 
         elif type(valor_atual) == float:
-            novo_valor = float(novo_valor)
+            novo_valor = float(novo_input)
 
         else:
-            novo_valor = str(novo_valor)
+            novo_valor = str(novo_input)
 
         dicionario[key_escolhida] = novo_valor
 
@@ -210,3 +213,43 @@ def menu():
 4 - Remover uma key 
 5 - Exibe o dicionário
 """)
+
+
+def main():
+    dicionario = {}
+
+    while True:
+        os.system("cls")
+
+        menu()
+
+        opcao = input("    Escolha: ")
+
+        match opcao:
+
+            case "0":
+                print(">>>>> Processando saída")
+                break
+
+            case "1":
+                zerar_dicionario(dicionario)
+
+            case "2":
+                adicionar_key(dicionario)
+
+            case "3":
+                editar_value(dicionario)
+
+            case "4":
+                remover_key(dicionario)
+
+            case "5":
+                exibir_dicionario(dicionario)
+                pausar()
+
+            case _:
+                print(">>>>> Opção inválida! Digite um número entre 0 e 5.")
+                pausar()
+
+
+main()
