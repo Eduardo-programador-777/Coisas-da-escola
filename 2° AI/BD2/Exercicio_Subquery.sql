@@ -74,3 +74,33 @@ Utilizando subqueries e sem JOIN, descubra o nome do cliente responsável pelo p
 Resultado esperado: Carlos.
 
 */
+
+-- 1. Clientes que possuem pedidos
+SELECT nome FROM clientes WHERE id_cliente IN (SELECT DISTINCT id_cliente FROM pedidos);
+
+-- 2. Clientes que não possuem pedidos
+SELECT nome FROM clientes WHERE id_cliente NOT IN (SELECT id_cliente FROM pedidos);
+
+-- 3. Pedidos acima da média
+SELECT id_pedido, id_cliente, valor FROM pedidos WHERE valor > (SELECT AVG(valor) FROM pedidos);
+
+-- 4. Clientes com pedido acima de R$ 1.000
+SELECT nome FROM clientes WHERE id_cliente IN (SELECT id_cliente FROM pedidos WHERE valor > 1000.00);
+
+-- 5. Produto mais caro
+SELECT nome, preco FROM produtos WHERE preco = (SELECT MAX(preco) FROM produtos);
+
+-- 6. Produtos acima da média
+SELECT nome, preco FROM produtos WHERE preco > (SELECT AVG(preco) FROM produtos);
+
+-- 7. Produtos da categoria Eletrônicos
+SELECT nome FROM produtos WHERE id_categoria = (SELECT id_categoria FROM categorias WHERE nome_categoria = 'Eletrônicos');
+
+-- 8. Total gasto por Carlos
+SELECT SUM(valor) AS total_gasto FROM pedidos WHERE id_cliente = (SELECT id_cliente FROM clientes WHERE nome = 'Carlos');
+
+-- 9. Clientes que gastaram mais que Maria
+SELECT nome, (SELECT SUM(valor) FROM pedidos WHERE id_cliente = c.id_cliente) AS total_gasto FROM clientes c WHERE (SELECT SUM(valor) FROM pedidos WHERE id_cliente = c.id_cliente) > (SELECT SUM(valor) FROM pedidos WHERE id_cliente = (SELECT id_cliente FROM clientes WHERE nome = 'Maria'));
+
+-- 10. Cliente que fez o maior pedido
+SELECT nome FROM clientes WHERE id_cliente = (SELECT id_cliente FROM pedidos WHERE valor = (SELECT MAX(valor) FROM pedidos));
