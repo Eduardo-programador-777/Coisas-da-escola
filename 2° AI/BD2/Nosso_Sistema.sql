@@ -1,5 +1,3 @@
--- set - quak eu quero alterar, where- onde eu quer altrerar
-
 create database nosso_sistema;
 use nosso_sistema;
 
@@ -13,6 +11,12 @@ create table Cliente(
 	uf char(2),
 	ie char(12)
 );
+create table Vendedor(
+	cod_ven numeric(4) primary key,
+	salario_fixo numeric(10,2),
+	comissao char(1),
+	nome_ven varchar(20) not null
+);
 
 
 create table Pedido(
@@ -23,12 +27,6 @@ create table Pedido(
 );
 select * from Vendedor;
 
-create table Vendedor(
-	cod_ven numeric(4) primary key,
-	salario_fixo numeric(10,2),
-	comissao char(1),
-	nome_ven varchar(20) not null
-);
 
 
 create table Produto(
