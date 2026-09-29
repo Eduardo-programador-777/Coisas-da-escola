@@ -1,0 +1,2 @@
+Ronaldo,14,67.0
+rogerio,14,145.0
