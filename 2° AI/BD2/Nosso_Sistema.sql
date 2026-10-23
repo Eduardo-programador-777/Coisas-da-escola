@@ -70,18 +70,7 @@ insert Vendedor values(101, 2650, 'C', 'Joao')
 insert Vendedor values(310, 870, 'B', 'Josias')
 insert Vendedor values(250, 2930, 'B', 'Mauricio')
 
-insert Produto values (25, 'KG', 'Queijo', 0.97);
-insert Produto values (31, 'BAR', 'Chocolate', 0.87);
-insert Produto values (78, 'L', 'Vinho', 2.00);
-insert Produto values (22, 'M', 'Linho', 0.11);
-insert Produto values (30, 'SAC', 'Açúcar', 0.30);
-insert Produto values (53, 'M', 'Linha', 1.80);
-insert Produto values (13, 'G', 'Ouro', 6.18);
-insert Produto values (45, 'M', 'Madeira', 0.25);
-insert Produto values (87, 'M', 'Cano', 1.97);
-insert Produto values (77, 'M', 'Papel', 1.05);
-select * from Produto
-
+select * from Vendedor
 insert Pedido values (121, 20, 410, 209)
 insert Pedido values (97, 20, 720, 101)
 insert Pedido values (101, 15, 720, 101)
@@ -101,6 +90,18 @@ insert Pedido values (108, 15, 290, 310)
 insert Pedido values (119, 30, 390, 250)
 insert Pedido values (127, 10, 410, 11)
 select * from Pedido
+
+insert Produto values (25, 'KG', 'Queijo', 0.97);
+insert Produto values (31, 'BAR', 'Chocolate', 0.87);
+insert Produto values (78, 'L', 'Vinho', 2.00);
+insert Produto values (22, 'M', 'Linho', 0.11);
+insert Produto values (30, 'SAC', 'Açúcar', 0.30);
+insert Produto values (53, 'M', 'Linha', 1.80);
+insert Produto values (13, 'G', 'Ouro', 6.18);
+insert Produto values (45, 'M', 'Madeira', 0.25);
+insert Produto values (87, 'M', 'Cano', 1.97);
+insert Produto values (77, 'M', 'Papel', 1.05);
+select * from Produto
 
 insert Item_pedido values (121, 25, 10);
 insert Item_pedido values (121, 31, 35);
@@ -176,5 +177,19 @@ select * from Item_pedido where cod_prod = 77 or cod_prod = 53 or cod_prod = 31 
 -- 23.  Quais vendedores possuem duas letras "o" em seu nome?
 -- 24.  Quais vendedores possuem a penúltima letra do nome a letra "i"?
 -- 25. Exibe o nome dos clientes que possuam as letras “o” e “e” em seu nome.
+
+-- 1 - Mostre os clientes e seus pedidos, exiba o nome do cliente com o número do pedido.
+select  c.nome_clie, p.num_pedido from Cliente c left join Pedido p on c.cod_clie = p.cod_clie
+
+-- 2 - Mostre os vendedores e seus pedidos, exiba o nome do vendedor com o número do pedido.
+select v.nome_ven, p.num_pedido from Vendedor v left join Pedido p on v.cod_ven = p.cod_ven
+
+-- 3 - Mostre o nome do cliente, o número do pedido e o nome do vendedor que gerou o pedido.
+SELECT c.nome_clie, p.num_pedido, v.nome_ven FROM Pedido p inner JOIN Cliente c ON p.cod_clie = c.cod_clie right JOIN Vendedor v ON p.cod_ven = v.cod_ven;
+
+-- 4 - Mostre o número do pedido e os produtos descrição que estão neste pedido.
+select p.num_pedido, pr.descricao from Pedido p right join Item_pedido i on p.num_pedido = i.num_pedido left join Produto pr on pr.cod_prod = i.cod_prod;
+
+
 
 
