@@ -1,12 +1,16 @@
+# Davi Ribeiro Calado 2 ºA.i
+# Eduardo Marassatti Sassone 2ºA.I
 import json
 import os
 
 arquivo = "Pessoas.json"
 pessoas = []
 
-if os.path.exists(arquivo):
-    with open(arquivo, "r", encoding="utf-8") as f:
-        pessoas = json.load(f)
+def carregar_arquivo():
+    if os.path.exists(arquivo):
+        with open(arquivo, "r", encoding="utf-8") as f:
+            pessoas = json.load(f)
+    return pessoas
 
 while True:
     print("""
